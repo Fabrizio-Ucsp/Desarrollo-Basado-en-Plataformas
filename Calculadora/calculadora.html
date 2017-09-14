@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="script.js"></script>
+</head>
+<body >
+	<div >
+		<form action="#" >
+		<p id="textoPantalla">0</p>
+		<input type="button" value="NumerosDinamicos" onclick="main()">
+		<div id="calc" style="border: 1px solid black; width: 400px;"></div>
+		<input type="button" value="/" onclick="operar('/')"  />
+		<input type="button" value="*" onclick="operar('*')" />
+		<input type="button" value="-" onclick="operar('-')" /><br>
+		<input type="button" value="+" onclick="operar('+')" />
+		<input type="button" value="." onclick="numero('.')" />
+		<input type="button" value="(-)" onclick="Negativo()" /><br>
+		<input type="button" value="=" onclick="Igual()" />
+		<input type="button" class="largo" value="Limpiar" onclick="borradoTotal()"  />
+		</form>
+	</div>
+</body>
+</html>
