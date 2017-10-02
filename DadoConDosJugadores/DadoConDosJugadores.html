@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dados</title>
+  <style>
+td {
+  width: 30px;
+  height: 30px;
+}
+
+button {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+  </style>
+  <script>
+    window.onload = function(){
+     numero1=document.getElementById("Numero1");
+     numero2=document.getElementById("Numero2");
+    }
+
+    function lanzar1() {
+      var valor = Math.floor(Math.random()*6+1);
+      numero1.innerHTML=valor;
+      var dado = {
+        1: [4],
+        2: [0, 8],
+        3: [0, 4, 8],
+        4: [0, 2, 6, 8],
+        5: [0, 2, 4, 6, 8],
+        6: [0, 2, 3, 5, 6, 8],
+      };
+      pintar1(dado[valor]);
+    }
+    function lanzar2() {
+      var valor = Math.floor(Math.random()*6+1);
+      numero2.innerHTML=valor;
+      var dado = {
+        01: [4],
+        02: [0, 8],
+        03: [0, 4, 8],
+        04: [0, 2, 6, 8],
+        05: [0, 2, 4, 6, 8],
+        06: [0, 2, 3, 5, 6, 8],
+      };
+      pinta2(dado[valor]);
+    }
+    function pintar1(items) {
+      for(i=0;i<9;i++){
+        document.getElementById(i).innerHTML = "";
+      }
+      for (var i=0; i<items.length; i++) {
+        var celda = document.getElementById(items[i]);
+        celda.innerHTML = "*";    
+      }
+    }
+    function pinta2(items) {
+      for(i=0;i<9;i++){
+        document.getElementById("0"+i).innerHTML = "";
+      }
+      for (var i=0; i<items.length; i++) {
+        var celda = document.getElementById("0"+items[i]);
+        celda.innerHTML = "*";    
+      }
+    }
+
+    function comparar(){
+      num1=document.getElementById("Numero1").innerHTML;
+      num2=document.getElementById("Numero2").innerHTML;
+      if (num1>num2){
+        document.getElementById("resultado").innerHTML = "El ganador es el jugador numero 1";
+
+      }
+      if (num2>num1) {
+        document.getElementById("resultado").innerHTML = "El ganador es el jugador numero 2";
+      }
+      if (num1==num2) {
+        document.getElementById("resultado").innerHTML = "Hay un Empate";
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="lanzar1();">Lanzar</button>
+  <p id="Numero1">0</p>
+  <table border="1px">
+    <tr>
+      <td id="0"></td>
+      <td id="1"></td>
+      <td id="2"></td>
+    </tr>
+    <tr>
+      <td id="3"></td>
+      <td id="4"></td>
+      <td id="5"></td>
+    </tr>
+    <tr>
+      <td id="6"></td>
+      <td id="7"></td>
+      <td id="8"></td>
+    </tr>
+  </table>
+<br>
+<button onclick="lanzar2();">Lanzar</button>
+   <p id="Numero2">0</p>
+  <table border="1px">
+    <tr>
+      <td id="00"></td>
+      <td id="01"></td>
+      <td id="02"></td>
+    </tr>
+    <tr>
+      <td id="03"></td>
+      <td id="04"></td>
+      <td id="05"></td>
+    </tr>
+    <tr>
+      <td id="06"></td>
+      <td id="07"></td>
+      <td id="08"></td>
+    </tr>
+  </table>
+
+  <p id="resultado">El Ganador es : </p>
+  <button onclick="comparar()">Resultado</button>
+</body>
+</html>   
