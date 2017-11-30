@@ -4,7 +4,7 @@ $ingreso=$_SESSION['usua'];
 ?>
 
 <?php
-//ini_set( 'display_errors', 0 );
+ini_set( 'display_errors', 0 );
 
 header("Content-Type: text/javascript");
 $data = json_decode(file_get_contents('php://input'), true);
@@ -20,11 +20,10 @@ $sql = "SELECT fecha_enviado FROM mensajes WHERE fecha_enviado='" . $data["mensa
 
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+
 	$sql = "INSERT INTO mensajes (id,fecha_enviado, remitente, destinatario, contenido) ";
 	$sql .= " VALUES ('','" . $data["fecha_enviado"] . "', '" . $ingreso . "', '";
 	$sql .= $data["destinatario"] . "', '" . $data["contenido"] . "')";
-}
 
 $result = $conn->query($sql);
 

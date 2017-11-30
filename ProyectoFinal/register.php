@@ -54,6 +54,7 @@ if ($pass1==$pass2) {
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<title>Registro</title>
 </head>
 <body background="http://www.dgi-sll.com/wp-content/themes/Shuttershot/images/fondos/6.jpg">
@@ -61,21 +62,21 @@ if ($pass1==$pass2) {
 	<h1 style="text-align: center;color: white "><i>Pagina de Registro</i></h1>
 	</div>
 	<br>
-	<div style="padding-left: 500px">
+	<div style="padding-left: 500px" >
 	<form action="register.php" method="POST">
 		Usuario: <input type="text" name="usuario"><br><br>
 		Numero Celular: <input type="text" name="celular"><br><br>
 		Lugar de Nacimiento: <input type="text" name="pais"><br><br>
 		Password: <input type="password" name="password"><br><br>
 		Confirme su password: <input type="password" name="password2"><br><br>
-		Nombre: <input type="text" name="nombre"><br><br>
-		<input type="submit" name="submit" value="submit"><br>
+		Nombre: <input type="text" name="nombre" ><br><br>
+		<input type="submit" name="submit" value="submit" class="btn btn-secondary"	><br>
 	</form>
 	</div>
 	<br>
 	<br>
 	<br>
-	<form method="link" action="main_test.html"> <input TYPE="submit" VALUE="volver al inicio"> </form>
+	<form method="link" action="main_test.html"> <input TYPE="submit" VALUE="volver al inicio" class="form-control"> </form>
 	<br>
 </body>
 </html>
