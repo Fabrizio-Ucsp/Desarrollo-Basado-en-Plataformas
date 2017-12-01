@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-11-2017 a las 16:08:23
+-- Tiempo de generación: 01-12-2017 a las 00:58:47
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -41,31 +41,34 @@ CREATE TABLE `mensajes` (
 --
 
 INSERT INTO `mensajes` (`id`, `fecha_enviado`, `remitente`, `destinatario`, `contenido`) VALUES
-(1, '2017-11-30', 'fabrizio', 'rodrigo', 'Hola'),
-(2, '2017-12-30', 'rodrigo', 'fabrizio', 'hola que tal'),
-(3, '0000-00-00', 'fabrizio', 'dapawa', 'Muerete'),
 (29, '2017-11-01', 'dapawa', 'fabrizio', 'bla bla bla'),
-(30, '0000-00-00', 'dapawa', 'rodrigo', 'hola que tal como estas '),
 (32, '2017-11-24', 'fabrizio', 'rodrigo', 'rodrigo'),
 (34, '2017-11-04', 'fabrizio', 'rodrigo', 'Mensaje de prueva'),
-(39, '0000-00-00', 'fabrizio', 'dapawa', 'hola que hace'),
-(41, '0000-00-00', 'fabrizio', 'dapawa', 'hola iÃ±igo'),
-(42, '0000-00-00', 'fabrizio', 'dapawa', 'TEST TEST TEST TEST'),
-(43, '0000-00-00', 'fabrizio', 'dapawa', 'Hola como estas'),
-(44, '0000-00-00', 'dapawa', 'fabrizio', 'Mensaje de prueva'),
-(45, '0000-00-00', 'fabrizio', 'dapawa', 'Mensaje'),
 (46, '2017-11-09', 'bot1', 'fabrizio', 'algo que no se'),
-(55, '0000-00-00', 'dsadasd', 'asd', 'asdasdasd'),
-(56, '0000-00-00', 'a', 'a', 'a'),
 (57, '2017-11-01', 'rodrigo', 'fabrizio', 'feliz cumple'),
-(58, '0000-00-00', 'rodrigo', 'fabrizio', 'test'),
-(59, '0000-00-00', 'rodrigo', 'fabrizio', 'test'),
-(60, '0000-00-00', 'rodrigo', 'fabrizio', 'test'),
 (61, '2017-11-01', 'rodrigo', 'fabrizio', 'tetete'),
 (62, '2017-11-01', 'rodrigo', 'fabrizio', 'tetete'),
 (63, '2017-11-01', 'rodrigo', 'fabrizio', 'asdasdasd'),
-(64, '2018-01-01', 'rodrigo', 'fabrizio', 'test t2t2t2t2t2'),
-(65, '2017-11-12', 'rodrigo', 'bot1', 'hola');
+(65, '2017-11-12', 'rodrigo', 'bot1', 'hola'),
+(66, '2017-11-27', 'fabrizio', 'rodrigo', 'hola parce'),
+(79, '2017-11-27', 'rodrigo', 'fabrizio', 'jellouuuuuuuuuuuu'),
+(80, '2017-11-27', 'rodrigo', 'fabrizio', 'dsadsfsfsd'),
+(81, '2017-11-27', 'rodrigo', 'fabrizio', 'dapawarullssaÃ±djaskldja'),
+(82, '2017-11-27', 'rodrigo', 'fabrizio', 'dapawarullssaÃ±djaskldja'),
+(83, '2017-11-27', 'rodrigo', 'fabrizio', 'dapawarullssaÃ±djaskldja'),
+(84, '2017-11-27', 'rodrigo', 'fabrizio', 'dapawarullssaÃ±djaskldja'),
+(95, '2017-11-30', 'FabrizioRodrigo', 'RodrigoAli', 'Hola Amigo Como estas ? '),
+(96, '2017-11-30', 'FabrizioRodrigo', 'RodrigoAli', 'Todo Bien ?'),
+(97, '2017-11-30', 'RodrigoAli', 'FabrizioRodrigo', 'Claro Todo Bien Gracias Por Preguntar'),
+(98, '2017-11-30', 'RodrigoAli', 'FabrizioRodrigo', ':)'),
+(99, '2017-11-30', 'RodrigoAli', 'FabrizioRodrigo', 'y como te va a ti ? '),
+(101, '2017-11-30', 'RodrigoAli', 'FabrizioRodrigo', 'todo bien en el trabajo?'),
+(102, '2017-11-30', 'FabrizioRodrigo', 'RodrigoAli', 'Todo Genial :)'),
+(103, '2017-11-30', 'FabrizioRodrigo', 'RodrigoAli', 'justo hoy me subieron el sueldo xD'),
+(104, '2017-12-01', 'fabrizio', 'rodrigo', 'test ssss'),
+(105, '2017-12-01', 'fabrizio', 'rodrigo', 'xdddddddd'),
+(106, '2017-12-01', 'fabrizio', 'rodrigo', 'algo reandom'),
+(107, '2017-12-01', 'fabrizio', 'FabrizioRodrigo', 'Hola quiero ser tu amigo ^_^');
 
 -- --------------------------------------------------------
 
@@ -91,7 +94,9 @@ INSERT INTO `usuarios` (`id`, `usuario`, `celular`, `pais`, `password`, `nombre`
 (8, 'rodrigo', '9517031755', 'peru', 'rodrigo', 'Rodrigo'),
 (9, 'bot1', '951703177', 'Arequipa ', '123', 'bot1'),
 (11, 'bot2', '951703171', 'Peru', '1234', 'bot2'),
-(16, 'asdasd', 'asdasd', 'asdasd', '', 'sadasd');
+(17, 'dapawaruls', '951706175', 'USA', 'dapawa', 'Dapawarils'),
+(18, 'FabrizioRodrigo', '951703175', 'Arequipa-Peru', '123', 'Fabrizio Flores Pari'),
+(19, 'RodrigoAli', '951703176', 'Arequipa-Peru', '123', 'Rodrigo Ali');
 
 --
 -- Índices para tablas volcadas
@@ -117,13 +122,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `mensajes`
 --
 ALTER TABLE `mensajes`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
